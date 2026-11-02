@@ -78,3 +78,4 @@ Console.WriteLine("Szoveg ");
 string b = Console.ReadLine();
 
 Console.WriteLine(tavolitas(b));
+
