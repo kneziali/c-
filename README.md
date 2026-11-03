@@ -1,4 +1,4 @@
-# Fibonacci és a kis absMax 
+# Fibonacci ba kis absMax és barátaik
 
 ## AbsMaxx
 
@@ -44,4 +44,65 @@ int fibo(int n)
 Console.WriteLine(fibo(14));
 
 ```
-Ugye milyen menő!
+
+
+## Jelszó erősség néző
+
+
+```cs
+int jelszo_erosseg(string jelszo)
+{
+       int erosseg = 1;
+    if (jelszo.Length >= 5)
+        erosseg++;
+    if (jelszo.Length >= 8)
+        erosseg+=2;
+    foreach(char x in jelszo)
+    {
+        if (x == '_' || x == '-')
+            erosseg += 2;
+
+    }
+    if (jelszo.Contains("123") || jelszo.Contains("jelszo"))
+        erosseg = 0;
+    if (jelszo.Length < 1)
+        erosseg = 0;
+
+    return erosseg;
+}
+
+
+Console.Write("Jelszo: ");
+string a = Console.ReadLine();
+Console.WriteLine( jelszo_erosseg(a));
+
+```
+
+
+## Magánhangzó nuku
+
+
+
+
+
+```cs
+string magan = "aáeéiíoóöőuúüű";
+string semmi = "";
+
+string tavolitas(string szoveg)
+{
+    foreach (char x in szoveg)
+        if (!magan.Contains(x))
+            semmi += x;
+    return semmi;
+}
+
+
+
+Console.Write("Szoveg: ");
+string b = Console.ReadLine();
+
+Console.WriteLine(tavolitas(b));
+
+
+```
