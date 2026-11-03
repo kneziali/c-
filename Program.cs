@@ -30,7 +30,6 @@ Console.WriteLine(fibo(14));
 
 
 
-
 int jelszo_erosseg(string jelszo)
 {
        int erosseg = 1;
@@ -58,7 +57,6 @@ string a = Console.ReadLine();
 Console.WriteLine( jelszo_erosseg(a));
 
 
-
 string magan = "aáeéiíoóöőuúüű";
 string semmi = "";
 
@@ -66,16 +64,13 @@ string tavolitas(string szoveg)
 {
     foreach (char x in szoveg)
         if (!magan.Contains(x))
-            return semmi;
-        else
-            return semmi += x;
-    return "";
+            semmi += x;
+    return semmi;
 }
 
 
 
-Console.WriteLine("Szoveg ");
+Console.Write("Szoveg: ");
 string b = Console.ReadLine();
 
 Console.WriteLine(tavolitas(b));
-
